@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "001dd81e-538b-4ef4-a741-4531fce292d2",
+		"name": "Assignment_myTaxi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44027334",
+		"_collection_link": "https://agi-2741340.postman.co/workspace/AGI's-Workspace~aebb22e7-dedd-48fd-8af3-1e309d1f061c/collection/44027334-001dd81e-538b-4ef4-a741-4531fce292d2?action=share&source=collection_link&creator=44027334"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/drivers/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\"    : \"GG\",\r\n    \"username\": \"OLAF_12345/\",\r\n    \"password\": \"OLAF_123456\",\r\n    \"carModel\": \"Toyota Camry\",\r\n    \"carColor\": \"Black\",\r\n    \"carPlate\": \"MDX3924\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/drivers/register",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"drivers",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/drivers/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"OLAF_1234/\",\r\n    \"password\": \"OLAF_123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/drivers/login",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"drivers",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drivers view rides",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUyYzdiMTEzZWY0MDlmMmRkYjM0NWQiLCJyb2xlIjoiZHJpdmVyIiwiaWF0IjoxNzUwMjU2MzgwLCJleHAiOjE3NTAyNTk5ODB9.2dEpIZ4R1RmhknWecKC9j6zkrFotBbbbPZUKH8At4nQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/drivers/view-rides",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"drivers",
+						"view-rides"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drivers accept ride",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUyYzdiMTEzZWY0MDlmMmRkYjM0NWQiLCJyb2xlIjoiZHJpdmVyIiwiaWF0IjoxNzUwMjU2MzgwLCJleHAiOjE3NTAyNTk5ODB9.2dEpIZ4R1RmhknWecKC9j6zkrFotBbbbPZUKH8At4nQ\",\r\n   \"rideId\": \"684a67e7667016e562fe83d2\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/drivers/accept-ride",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"drivers",
+						"accept-ride"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drivers delete account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUyYzdiMTEzZWY0MDlmMmRkYjM0NWQiLCJyb2xlIjoiZHJpdmVyIiwiaWF0IjoxNzUwMjU2MzgwLCJleHAiOjE3NTAyNTk5ODB9.2dEpIZ4R1RmhknWecKC9j6zkrFotBbbbPZUKH8At4nQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/drivers/delete-account",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"drivers",
+						"delete-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "passengers register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"OLAF_1234/\",\r\n    \"password\": \"OLAF_123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/passengers/register",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"passengers",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "passengers login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"OLAF_1234/\",\r\n    \"password\": \"OLAF_123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/passengers/login",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"passengers",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "passengers request ride",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUyY2NiMDEzZWY0MDlmMmRkYjM0NWUiLCJyb2xlIjoicGFzc2VuZ2VyIiwiaWF0IjoxNzUwMjU2ODI3LCJleHAiOjE3NTAyNjA0Mjd9.f8sPSsAO6A8psj6ESJvp5z0BkmfFiRl6qV-y1cdLaqw\",\r\n     \"pickup\": \"UTEM\",\r\n     \"dropoff\": \"Durian Tunggal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/passengers/request-ride",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"passengers",
+						"request-ride"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "passengers cancel ride",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUyY2NiMDEzZWY0MDlmMmRkYjM0NWUiLCJyb2xlIjoicGFzc2VuZ2VyIiwiaWF0IjoxNzUwMjU2ODI3LCJleHAiOjE3NTAyNjA0Mjd9.f8sPSsAO6A8psj6ESJvp5z0BkmfFiRl6qV-y1cdLaqw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/passengers/cancel-ride",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"passengers",
+						"cancel-ride"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "passengers delete account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUyY2NiMDEzZWY0MDlmMmRkYjM0NWUiLCJyb2xlIjoicGFzc2VuZ2VyIiwiaWF0IjoxNzUwMjU2ODI3LCJleHAiOjE3NTAyNjA0Mjd9.f8sPSsAO6A8psj6ESJvp5z0BkmfFiRl6qV-y1cdLaqw\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/passengers/delete-account",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"passengers",
+						"delete-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin view rides",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/admin/view-rides",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"admin",
+						"view-rides"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin driver details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin\",\r\n  \"driverId\": \"6852d2ee13ef409f2ddb3461\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://assignmentbenr2243-behrd9d6btdaeteu.eastasia-01.azurewebsites.net/admin/driver-details",
+					"protocol": "https",
+					"host": [
+						"assignmentbenr2243-behrd9d6btdaeteu",
+						"eastasia-01",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"admin",
+						"driver-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin passenger details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\",\r\n    \"passengerId\": \"684b99b0735ba69b98bc8307\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/passenger-details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"passenger-details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
